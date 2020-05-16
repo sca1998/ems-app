@@ -28,6 +28,18 @@ REACT_APP_API_BASEURL=http://localhost:8000
 
 You may replace `http://localhost:8000` with another endpoint if your server instance runs elsewhere.
 
+## Special libraries
+
+As required in specification, here are the list of special libraries included:
+
+### Axios
+
+>Replacing Fetch API with better syntax and default headers management. See [axios](https://github.com/axios/axios#readme).
+
+### react-router-dom
+
+>Simple routing in React app. See [react-router](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom#readme).
+
 ## Available Scripts
 
 In the project directory, you can run:
