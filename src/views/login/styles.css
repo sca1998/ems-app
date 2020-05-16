@@ -1,0 +1,52 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-form-container {
+  padding-top: 2rem;
+  max-width: 500px;
+  text-align: center;
+}
+
+.login-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form > label {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.register-cta {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-cta > button {
+  margin-top: 1rem;
+  padding: .8rem 1.8rem;
+  border-radius: 1.3rem;
+  font-size: 1rem;
+  background: linear-gradient(253deg, rgba(255,176,176,1) 15%, rgba(246,220,164,1) 100%);
+}
+
+.register-cta > button:hover {
+  opacity: .75;
+}
+
+@media (max-width: 425px) {
+  .login-form > label {
+    margin: 1rem 0;
+  }
+
+  .form-label {
+    min-width: 70px;
+  }
+}

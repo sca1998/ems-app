@@ -1,4 +1,32 @@
+# COMP3322 Event Management System Frontend
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Prerequisites
+
+You will need [Node.js](https://nodejs.org/en/) v12.16.3 LTS installed on your system.
+
+[Yarn](https://classic.yarnpkg.com/en/) is the recommended package manager.
+
+## Installation
+
+In project root run in terminal:
+
+```
+yarn install
+```
+
+This will install all neccessary dependencies to run the react application.
+
+## Project setup
+
+In project root, create a `.env` file (notice the dot at the start), put in the following line and save:
+
+```
+REACT_APP_API_BASEURL=http://localhost:8000
+```
+
+You may replace `http://localhost:8000` with another endpoint if your server instance runs elsewhere.
 
 ## Available Scripts
 
@@ -11,11 +39,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 

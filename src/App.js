@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import './App.css'
+
+import NavBar from './components/nav-bar'
+import EventList from './views/event-list'
+import Login from './views/login'
+import Register from './views/register'
+import CreateEvent from './views/event-new'
+import EventDetail from './views/event-detail'
+
+import { UserContext } from './providers/user'
 
 function App() {
+  const { isLoggedIn, fetchUser } = useContext(UserContext)
+
+  useEffect(() => {
+    if (isLoggedIn) fetchUser()
+    // eslint-disable-next-line
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <NavBar />
+      <Switch>
+        <Route exact path='/'>
+          <EventList />
+        </Route>
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <Route path='/register'>
+          <Register />
+        </Route>
+        <Route path='/events/new'>
+          <CreateEvent />
+        </Route>
+        <Route path='/events/:id'>
+          <EventDetail />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

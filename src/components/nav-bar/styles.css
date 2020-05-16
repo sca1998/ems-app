@@ -1,0 +1,30 @@
+
+.nav-bar {
+  background-color: white;
+  border-bottom: 1px solid var(--color-border);
+  padding: .5rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-bar > a {
+  margin: .5rem 0 .5rem 1rem;
+}
+
+.nav-bar-actions {
+  margin: .5rem 1rem;
+}
+
+.nav-bar-actions > a {
+  margin-right: 1rem;
+}
+
+@media (max-width: 425px) {
+  .nav-bar {
+    justify-content: center;
+    text-align: center;
+  }
+}
